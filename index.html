@@ -4,39 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMB SMKN 1 WAY TENONG</title>
-    <!-- Memanggil CSS dengan trik anti-cache v=1.4 -->
-    <link rel="stylesheet" href="style.css?v=1.4">
+    <link rel="stylesheet" href="style.css?v=1.5">
 </head>
 <body>
 
     <div class="container">
-        <div class="card">
+        <div class="card" style="text-align: center;">
             
-            <!-- LOGO DIKUNCI UKURANNYA DISINI AGAR TIDAK MEMENUHI LAYAR -->
             <img src="logo_sekolah.png" alt="Logo SMKN 1 Way Tenong" style="width: 100px; height: auto; display: block; margin: 0 auto 20px auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));">
 
-            <!-- Judul Teks -->
             <h2>PENGUMUMAN SISTEM PENERIMAAN MURID BARU</h2>
             <h2>(SPMB)</h2>
             <h3>SMKN 1 WAY TENONG</h3>
             <p class="ta">Tahun Ajaran 2026/2027</p>
             
-            <!-- Garis Cerah Biru di Tengah -->
-            <div class="underline"></div>
+            <div class="underline" style="margin: 0 auto 25px auto;"></div>
 
-            <!-- Petunjuk Input -->
             <p class="instruction">Masukkan NISN resmi Anda untuk verifikasi data:</p>
 
-            <!-- Kolom Input -->
             <input type="text" id="nisnInput" placeholder="Contoh: 0012345678" maxlength="10">
 
-            <!-- Tombol Menggunakan Kelas Asli Dengan Teks Baru -->
             <button onclick="cekKelulusan()">CEK HASIL SELEKSI</button>
 
-            <!-- Wadah Hasil Kelulusan -->
-            <div id="result-container"></div>
+            <div id="result-container" style="margin-top: 25px; text-align: left;"></div>
             
-            <!-- Pesan Error -->
             <p id="errorMsg" class="error hidden">Data tidak ditemukan, periksa kembali nomor Anda.</p>
             
         </div>
