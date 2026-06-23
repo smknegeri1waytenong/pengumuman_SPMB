@@ -1,25 +1,48 @@
-<!-- Bagian Konten Utama di index.html -->
-<div class="card">
-    <!-- Logo Sekolah -->
-    <img src="logo.png" alt="Logo SMKN 1 Way Tenong" class="logo">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMB SMKN 1 WAY TENONG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- JUDUL UTAMA YANG DIUBAH -->
-    <h2>PENGUMUMAN SISTEM PENERIMAAN MURID BARU (SPMB)</h2>
-    <h3>SMKN 1 WAY TENONG</h3>
-    <p class="ta">Tahun Ajaran 2026/2027</p>
-    
-    <div class="underline"></div>
+    <!-- Pembungkus Utama Agar Desain Card & Background Kembali Normal -->
+    <div class="container">
+        <div class="card">
+            
+            <!-- Logo Sekolah -->
+            <img src="logo.png" alt="Logo SMKN 1 Way Tenong" class="logo">
 
-    <!-- Teks Petunjuk Input -->
-    <p class="instruction">Masukkan Nomor Peserta / NISN resmi Anda untuk verifikasi kelulusan seleksi:</p>
+            <!-- Judul Utama -->
+            <h2>PENGUMUMAN SISTEM PENERIMAAN MURID BARU</h2>
+            <h2>(SPMB)</h2>
+            <h3>SMKN 1 WAY TENONG</h3>
+            <p class="ta">Tahun Ajaran 2026/2027</p>
+            
+            <div class="underline"></div>
 
-    <!-- Input Kode -->
-    <input type="text" id="nisnInput" placeholder="Contoh: 0086613170" maxlength="10">
+            <!-- Teks Petunjuk Input -->
+            <p class="instruction">Masukkan Nomor Peserta / NISN resmi Anda untuk verifikasi kelulusan seleksi:</p>
 
-    <!-- TOMBOL PROSES YANG DIUBAH TEKSNYA -->
-    <button onclick="cekKelulusan()">CEK HASIL SELEKSI</button>
+            <!-- Input Kode -->
+            <input type="text" id="nisnInput" placeholder="Contoh: 0086613170" maxlength="10">
 
-    <!-- Container Hasil -->
-    <div id="result-container"></div>
-    <p id="errorMsg" class="error hidden">Data tidak ditemukan, periksa kembali nomor Anda.</p>
-</div>
+            <!-- Tombol Cek -->
+            <button onclick="cekKelulusan()">CEK HASIL SELEKSI</button>
+
+            <!-- Tempat Menampilkan Hasil (Kartu Hijau / Merah) -->
+            <div id="result-container"></div>
+            
+            <!-- Pesan Error Bawaan (Tersembunyi secara default) -->
+            <p id="errorMsg" class="error hidden">Data tidak ditemukan, periksa kembali nomor Anda.</p>
+            
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke database siswa dan logika website -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
