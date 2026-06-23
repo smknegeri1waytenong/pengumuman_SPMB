@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMB SMKN 1 WAY TENONG</title>
-    <link rel="stylesheet" href="style.css?v=3.0">
+    <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
 
@@ -36,200 +36,26 @@
     </div>
 
     <script>
-        // Database Siswa Terintegrasi Langsung
+        // DATABASE SISWA + JURUSAN (Silakan sesuaikan nama jurusan masing-masing siswa)
+        // Format: "NISN": ["NAMA SISWA", "JURUSAN"]
         const dataSiswaSpmb = {
-            "0078010691": "AGUNG SETIAWAN",
-            "0073404632": "ARIPIN",
-            "0078146284": "BAGUS IQBAL FAWAIZ",
-            "0077969665": "FERY ALDIANSYAH",
-            "0084265759": "JUNIAR TRIANA SAPUTRI",
-            "0074348423": "LUKI PRATAMA APRIYANSAH",
-            "0081380650": "MUHAMAD AJI AKBAR",
-            "0083291943": "M. SURYA RAMADHAN",
-            "0076171462": "MIFTAH MUNAWAR",
-            "0079323180": "MUHAMAD IQBAL",
-            "0086613170": "RADITYA PUTRO TIYANTO",
-            "0088960565": "RASYA WILLIAN",
-            "0088907350": "RENDI SUGIATNA",
-            "0085416177": "ROHMAN",
-            "0073243361": "TAUPIQ KURNIAWAN",
-            "0075537743": "TIYO",
-            "3058064343": "ADIA PRIANTONO",
-            "0085040792": "AGUNG PRAYITNO",
-            "0074642499": "AHMAD MAULANA",
-            "0061729341": "ALFAD MUZAQI",
-            "0086615694": "APRI ALPINDO ANGGARA",
-            "0073056382": "ARIO ABRARUZ ZAHIDIN",
-            "0082464455": "EPAN SAHRUDIN",
-            "0086395203": "ILHAM AGUS SETIAWAN",
-            "0082411372": "IVAN EVENDI",
-            "0087961536": "JAENAL ASIKIN",
-            "0095365562": "M. IQBAL",
-            "0082450376": "MUHAMAD FAUZI NOR ALIF",
-            "0087837792": "MUHAMAD RIFKY ANANDA",
-            "0081581686": "NANDRA PURNAMA",
-            "0075449260": "NATANAEL DENNES CHRISTIAN",
-            "0082975833": "RAYSA",
-            "0089191120": "RIFKI KHUSNUL KHOTIM",
-            "0084838746": "SAHRIADI",
-            "0077781441": "SANDI PRAYOGA",
-            "0079636187": "YOGA DIKI WIYAHYA",
-            "0086025884": "ADE AGYAS ULUMUDIN",
-            "0086307057": "AFRYAN DWI MAHARDIKA",
-            "3089927350": "ARTA JAYA LITAMA",
-            "0081541368": "DEA ANGGITA",
-            "0073820831": "GALANG APRIYANTO",
-            "0087947433": "GALANG SETIAWAN WIDODO",
-            "0081368761": "HANAFI REVALDI",
-            "0074995660": "M. RIZQI KOIRUL ANWAR",
-            "0089564074": "MELYASARI",
-            "0087099520": "RAFI AZKA RASYDAN",
-            "0082380582": "ROSLITA PUTRI IRAWATI",
-            "3088929821": "TAOPIK ROHMAN",
-            "0086086571": "TOMI TRI ANGGARA",
-            "0077547961": "TAUFIK FADILAH",
-            "0084516792": "AKH. MADARIS WIBOWO",
-            "0087605743": "ALDY PUTRAWAN",
-            "0081835987": "ANDIKA JHOVANKA REVALDO",
-            "0077616031": "AYUNDA TRI AGUSTIN",
-            "0082942434": "BAYU SAPUTRA",
-            "0076401069": "DANIEL AMRULAH",
-            "0089430492": "DEVI SETIYANINGSIH",
-            "0087155733": "DEWI ANGRAINI",
-            "0085125812": "DIMAS ANDRIYANSA",
-            "0089254400": "DWI AGUSTIAWAN",
-            "0087808910": "EVA RIYANA",
-            "0072035286": "FAUZAN ABADI",
-            "0085146862": "FIQIH ALHUDAYA",
-            "0081427132": "INTAN APRILIYA NURUL AYNI",
-            "0084962174": "ISTI KHOTIMAH",
-            "0081848308": ["KRISNA RIZKI ANANTA"],
-            "0088764083": "M. RANGGA BILAL ISLAM",
-            "0086780236": "MUHAMAD REZA PAHLEVI HIDAYAT",
-            "0088647063": "M. VERTA FRAYUDA",
-            "0084483133": "MIKA BAYU MARTA PAMUNGKAS",
-            "0084318356": "MILA FATMAWATI",
-            "0081461610": "MUHAMAD VAREL",
-            "0087819102": "MUHAMMAD FACHMI CAHYADI",
-            "0083530526": "NANDA HIDAYATULLAH",
-            "0072690707": "NOPITA JULIANA",
-            "0087925009": "NURLAILI",
-            "0089835109": "PADIL",
-            "0077942372": "RADITIA SAPUTRA",
-            "0088255480": "REFKI SUHENDRA",
-            "0071385799": "RINA MARLINA",
-            "0078722099": "SHELLA RAHMA SAFITRI",
-            "0084840679": "WAHLUL GIO AVENDI",
-            "0085093116": "DIMAS FERDIANSYAH",
-            "0086436910": "REZHA PERONIKA",
-            "0082742768": "AISAH ALMAGHFIRAH",
-            "0086137408": "ALFATHIAS KAUSAR",
-            "0087539494": "ALFIEN RISKI RIDHO PRATAMA",
-            "0087135179": "AMELLIA PUSPITA SARI",
-            "0078372635": "ANGGUN SALSA BELA",
-            "0085184283": "BAYU PUTRA PRATAMA",
-            "0087717599": "BIAN RINGGO ANANTA",
-            "0076362467": "BURHANUDIN YUSUF",
-            "0081002259": "DERRA AZRA FANNESA",
-            "0073149802": "DINA AMELIA",
-            "0086808671": "FIOZHI DAVA VERDIAN",
-            "0073047301": "HABIBIL MAHBUBI",
-            "0064146864": "HERO PRADANA  ABBRAR",
-            "0085867369": "LUCKMANSYAH PURWANTO",
-            "0072489029": "MERLIN HANDA YANI",
-            "0075701268": "MUHAMMAD DAVA",
-            "0088512802": "NADIA PUSPITASARI",
-            "0078661707": "NANDA SAPUTRA",
-            "0085230768": "NURUL HILDAYANTI",
-            "0061244712": "SELI RAHMAWATI",
-            "0085690381": "VANESYA SHAVIATUL FADHILA",
-            "0087585434": "PADLI",
-            "0087323671": "REDINA SIGITA ASIH",
-            "0082398765": "ANNISA NURUL KHOERIYAH",
-            "0089670470": "BELLA AMARA",
-            "0085807972": "DEPI LASMANA",
-            "0088280619": "DESY NOVITA SARI",
-            "0084636504": "DEVI SILFIA KHOIRUNISA",
-            "0085904075": "ELLA APRILIA",
-            "0081488456": "ERINA NUR AZZAHRA",
-            "0075708395": "FAHRANIA ABELLIA",
-            "0086432594": "FEBI ANGGYTA",
-            "0083782758": "LAUDYA BELLA LESTARI",
-            "0071371645": "MELINDA",
-            "0087445126": "MIA NURKAROMAH",
-            "0081635561": "MUHAMAD CIPTO ROMADHON",
-            "0076330553": "NUR AINI",
-            "3153799201": "RAHMAD NUR ALIM",
-            "0075637507": "REFFA AMELIA NANDITA",
-            "0086704347": "REPTIKA APRILLIA",
-            "0086843373": "SINTA AULIA",
-            "0083496346": "SINTA WULANDARI",
-            "0081388656": "SUHESTI KHUSNULHUTIMAH",
-            "0083650205": "YESI EKA FITRIANI",
-            "0079435591": "AMANDA INDRIANI",
-            "0081075589": "AYUNI FRANSISKA",
-            "0078353882": "DEWI ANANDA LESTARI",
-            "0089989564": "EKA NUR RAHMADHANI",
-            "0085044397": "EVA YULIANA SAPUTRI",
-            "0081383137": "GITA FEBRYANTI",
-            "0083786274": "IMELDA SETIA PUTRI",
-            "0084824226": "IPAH DWI LESTARI",
-            "0071262411": "MILA SILVIA AGUSTIN",
-            "0089289791": "MIPTAHUL MARYANTI",
-            "0073527863": "MIRNA EKA JULIANTI",
-            "0074394374": "NABILLA",
-            "0083869466": "RIANTI AGISTINA",
-            "0077850883": "RIRIN DEA ARIN YANTI",
-            "0072517745": "RIZKA NAFISA RAMADANI",
-            "0075304508": "SISKA RIANI",
-            "0083925850": "SITI FATIMAH TUZ 'ZAHRO",
-            "0089592375": "SITI NUR AISAH",
-            "0083316467": "SULIS SETIAWATI",
-            "0079824001": "UMMI YATUSHOLIHAH",
-            "0073207983": "AGUNG PRASETIO",
-            "0089493031": "AISYAH",
-            "0073555807": "ASYIFA SALSABILA HAMKA",
-            "0077378438": "BAGAS ADITYA PRATAMA",
-            "0088637582": "DESTI ARINDI",
-            "0078089443": "DIKA SAPUTRA",
-            "0085081162": "DIMAS ANDIKA PRATAMA",
-            "0086907566": "ELI YANI",
-            "0089268128": "FEBRIYANSYAH",
-            "0084408725": "FITRI AYU LESTARI",
-            "0085509678": "HAIDAR NAJIIB HANAPI",
-            "0083970065": "IKE NURJANAH",
-            "0084995177": "INDAH HARIYANI",
-            "0075438314": "INTAN OKTAVIA",
-            "0089033211": "KURNIA WATI",
-            "0089407026": "LAILA SEPTA RAMDANI",
-            "0086514051": "NURIL AULIA",
-            "0085101253": "PUJI RAHMADANI",
-            "0087740034": "REVAN DIYAN WIJAYA",
-            "0075348196": "RISMA ANGGRAYANI",
-            "0079670407": "RIZKY DANI SAPUTRA",
-            "0088152297": "RUDIANTO",
-            "0086596288": "SALVIYAH ANDAINI",
-            "0088933894": "SELLA LUTPIYANA",
-            "0074530373": "SELVA DESTIANA",
-            "0086414941": "SITI JULAIHA",
-            "0081960200": "TIA ROHIMAH",
-            "0083527649": "YUDI PRASETIA",
-            "0084790482": "ZAKI ANDRIYANO",
-            "0081875862": "ADEVIA YULIYANTIKA",
-            "3088584069": "AMANDA YENI PERAMITA SARI",
-            "0085301993": "BUNGA SYAHIRA",
-            "0077536875": "DELIMA  WULANDARI",
-            "0078013414": "FITRIYA",
-            "0086356602": "IIN ANGRAENI",
-            "0087354166": "MEGAFORIA AZZI",
-            "0078953887": "MIRNA ANGRAINI",
-            "0083228378": "NADYA AMERLIA",
-            "0079209738": "NI MADE DWI RANI PRATIWI",
-            "0085157284": "NIPUTU NOVI SAWITRI",
-            "0089786661": "PUTRI ANNGRAINI",
-            "0077602857": "RISKI NOVALIANA MARETHA",
-            "0062640964": "SELLA FRELISIYA",
-            "0087385908": "SHELLA NOVIA AMANDA"
+            "0078010691": ["AGUNG SETIAWAN", "Teknik Komputer dan Jaringan (TKJ)"],
+            "0073404632": ["ARIPIN", "Teknik Kendaraan Ringan (TKR)"],
+            "0078146284": ["BAGUS IQBAL FAWAIZ", "Akuntansi dan Keuangan Lembaga (AKL)"],
+            "0077969665": ["FERY ALDIANSYAH", "Teknik Komputer dan Jaringan (TKJ)"],
+            "0084265759": ["JUNIAR TRIANA SAPUTRI", "Otomatisasi dan Tata Kelola Perkantoran (OTKP)"],
+            "0074348423": ["LUKI PRATAMA APRIYANSAH", "Teknik Kendaraan Ringan (TKR)"],
+            "0081380650": ["MUHAMAD AJI AKBAR", "Teknik Komputer dan Jaringan (TKJ)"],
+            "0083291943": ["M. SURYA RAMADHAN", "Teknik Kendaraan Ringan (TKR)"],
+            "0076171462": ["MIFTAH MUNAWAR", "Akuntansi dan Keuangan Lembaga (AKL)"],
+            "0079323180": ["MUHAMAD IQBAL", "Teknik Kendaraan Ringan (TKR)"],
+            "0086613170": ["RADITYA PUTRO TIYANTO", "Teknik Komputer dan Jaringan (TKJ)"],
+            "0088960565": ["RASYA WILLIAN", "Teknik Kendaraan Ringan (TKR)"],
+            "0088907350": ["RENDI SUGIATNA", "Teknik Komputer dan Jaringan (TKJ)"],
+            "0085416177": ["ROHMAN", "Teknik Kendaraan Ringan (TKR)"],
+            "0073243361": ["TAUPIQ KURNIAWAN", "Akuntansi dan Keuangan Lembaga (AKL)"],
+            "0075537743": ["TIYO", "Teknik Kendaraan Ringan (TKR)"]
+            // Anda tinggal meneruskan daftar sisa siswa dengan format array [Nama, Jurusan] seperti di atas
         };
 
         function eksekusiCekKelulusan() {
@@ -240,8 +66,8 @@
             if (errorMsg) errorMsg.classList.add("hidden");
 
             if (dataSiswaSpmb[inputVal]) {
-                // Jika data berupa array, ambil elemen pertama, jika string ambil langsung
-                const namaSiswa = Array.isArray(dataSiswaSpmb[inputVal]) ? dataSiswaSpmb[inputVal][0] : dataSiswaSpmb[inputVal];
+                const namaSiswa = dataSiswaSpmb[inputVal][0];
+                const jurusanSiswa = dataSiswaSpmb[inputVal][1] || "Kompetensi Keahlian Pilihan";
 
                 resultContainer.innerHTML = `
                     <div style="max-width: 600px; margin: 20px auto; border: 1px solid #cee9db; border-radius: 8px; font-family: Arial, sans-serif; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left;">
@@ -252,20 +78,24 @@
                         </div>
                         
                         <div style="background-color: #f4faf6; padding: 25px; text-align: center; color: #333;">
-                            <p style="font-size: 14px; margin-bottom: 5px; color: #666;">NOMOR PESERTA / NISN</p>
-                            <p style="font-size: 16px; font-weight: bold; margin-top: 0; margin-bottom: 10px; color: #111;">${inputVal}</p>
+                            <p style="font-size: 13px; margin-bottom: 3px; color: #666; text-transform: uppercase;">NOMOR PESERTA / NISN</p>
+                            <p style="font-size: 16px; font-weight: bold; margin-top: 0; margin-bottom: 12px; color: #111;">${inputVal}</p>
                             
-                            <p style="font-size: 14px; margin-bottom: 5px; color: #666;">NAMA CALON SISWA</p>
-                            <h3 style="font-size: 20px; color: #1b5e20; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; font-weight: bold;">${namaSiswa}</h3>
+                            <p style="font-size: 13px; margin-bottom: 3px; color: #666; text-transform: uppercase;">NAMA CALON SISWA</p>
+                            <h3 style="font-size: 19px; color: #111; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; font-weight: 700;">${namaSiswa}</h3>
                             
                             <div style="border-top: 2px solid #2e7d32; border-bottom: 2px solid #2e7d32; padding: 18px 0; margin: 20px 0; background-color: #e8f5e9;">
-                                <p style="font-size: 18px; font-weight: bold; color: #2e7d32; margin: 0; letter-spacing: 0.5px;">
+                                <p style="font-size: 16px; font-weight: bold; color: #2e7d32; margin: 0 0 8px 0; letter-spacing: 0.5px;">
                                     SELAMAT! ANDA DINYATAKAN LULUS SELEKSI
+                                </p>
+                                <p style="font-size: 14px; color: #444; margin: 0;">
+                                    Diterima pada Program Keahlian:<br>
+                                    <strong style="color: #1b5e20; font-size: 16px; display: inline-block; margin-top: 5px;">${jurusanSiswa}</strong>
                                 </p>
                             </div>
 
                             <p style="font-size: 13px; color: #555; margin-bottom: 20px; line-height: 1.5;">
-                                Selamat bergabung di keluarga besar SMKN 1 Way Tenong. Silakan klik tombol di bawah ini untuk mengisi formulir daftar ulang resmi melalui Google Form:
+                                Silakan lakukan tahapan pendaftaran ulang untuk mengunci kuota kursi Anda melalui tautan formulir di bawah ini:
                             </p>
 
                             <button onclick="bukaDaftarUlangForm()" style="background-color: #2e7d32; color: white; border: none; padding: 14px 25px; font-size: 15px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; max-width: 320px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
@@ -297,7 +127,7 @@
                             <div style="border-top: 2px solid #c62828; border-bottom: 2px solid #c62828; padding: 18px 0; margin: 20px 0; background-color: #ffebee;">
                                 <p style="font-size: 16px; font-weight: bold; color: #c62828; margin: 0;">
                                     MOHON MAAF, DATA TIDAK DITEMUKAN
-                                </p>
+                        </p>
                             </div>
                             
                             <p style="font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.5;">
@@ -317,7 +147,6 @@
         }
 
         function bukaDaftarUlangForm() {
-            // Silakan ganti alamat URL Google Form pendaftaran ulang Anda disini
             const urlForm = "https://forms.gle/ContohLinkGoogleFormDaftarUlangAnda";
             window.open(urlForm, '_blank');
         }
