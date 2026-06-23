@@ -1,6 +1,5 @@
 // Database Otomatis 192 Siswa SMKN 1 Way Tenong 2026/2027
 const dataSiswaSpmb = {
-    "0078010691": ["AGUNG SETIAWAN", "Teknik Komputer dan Jaringan (TKJ)"],
     "0073404632": ["ARIPIN", "Teknik Komputer dan Jaringan (TKJ)"],
     "0078146284": ["BAGUS IQBAL FAWAIZ", "Teknik Komputer dan Jaringan (TKJ)"],
     "0077969665": ["FERY ALDIANSYAH", "Teknik Komputer dan Jaringan (TKJ)"],
