@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMB SMKN 1 WAY TENONG</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Trik memutus cache browser agar desain biru langsung muncul -->
+    <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
 
-    <!-- Pembungkus Utama Agar Desain Card & Background Kembali Normal -->
     <div class="container">
         <div class="card">
             
@@ -35,13 +35,12 @@
             <!-- Tempat Menampilkan Hasil (Kartu Hijau / Merah) -->
             <div id="result-container"></div>
             
-            <!-- Pesan Error Bawaan (Tersembunyi secara default) -->
+            <!-- Pesan Error Bawaan -->
             <p id="errorMsg" class="error hidden">Data tidak ditemukan, periksa kembali nomor Anda.</p>
             
         </div>
     </div>
 
-    <!-- Menghubungkan ke database siswa dan logika website -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
