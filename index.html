@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMB SMKN 1 WAY TENONG</title>
-    <!-- Trik memutus cache browser agar desain biru langsung muncul -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
-<body>
+<body style="margin: 0; padding: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #111827, #1e1b4b, #311042);">
 
-    <div class="container">
-        <div class="card">
-            
-            <!-- Logo Sekolah -->
-            <img src="logo.png" alt="Logo SMKN 1 Way Tenong" class="logo">
+    <!-- Kotak Utama (Card) Dengan Desain Center Modern -->
+    <div style="width: 100%; max-width: 500px; margin: 20px; background: rgba(255, 255, 255, 0.07); padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-sizing: border-box;">
+        
+        <!-- Logo Sekolah (Disesuaikan dengan nama file asli di GitHub Anda) -->
+        <img src="logo_sekolah.png" alt="Logo SMKN 1 Way Tenong" style="width: 100px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
 
-            <!-- Judul Utama -->
-            <h2>PENGUMUMAN SISTEM PENERIMAAN MURID BARU</h2>
-            <h2>(SPMB)</h2>
-            <h3>SMKN 1 WAY TENONG</h3>
-            <p class="ta">Tahun Ajaran 2026/2027</p>
-            
-            <div class="underline"></div>
+        <!-- Judul Utama -->
+        <h2 style="color: #ffffff; font-size: 20px; font-weight: 700; margin: 0 0 5px 0; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.5px;">PENGUMUMAN SISTEM PENERIMAAN MURID BARU</h2>
+        <h2 style="color: #38bdf8; font-size: 22px; font-weight: 800; margin: 0 0 5px 0; letter-spacing: 1px;">(SPMB)</h2>
+        <h3 style="color: #ffffff; font-size: 16px; font-weight: 600; margin: 0 0 5px 0; letter-spacing: 0.5px;">SMKN 1 WAY TENONG</h3>
+        <p style="color: #9ca3af; font-size: 14px; margin: 0 0 20px 0; font-weight: 500;">Tahun Ajaran 2026/2027</p>
+        
+        <!-- Garis Pembatas Biru Ciri Khas Portal Lama Anda -->
+        <div style="width: 60px; height: 4px; background-color: #00bcd4; margin: 0 auto 25px auto; border-radius: 2px;"></div>
 
-            <!-- Teks Petunjuk Input -->
-            <p class="instruction">Masukkan Nomor Peserta / NISN resmi Anda untuk verifikasi kelulusan seleksi:</p>
+        <!-- Teks Instruksi -->
+        <p style="color: #e5e7eb; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">Masukkan Nomor Peserta / NISN resmi Anda untuk verifikasi kelulusan seleksi:</p>
 
-            <!-- Input Kode -->
-            <input type="text" id="nisnInput" placeholder="Contoh: 0086613170" maxlength="10">
+        <!-- Input Field -->
+        <input type="text" id="nisnInput" placeholder="Contoh: 0086613170" maxlength="10" style="width: 100%; padding: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: #ffffff; font-size: 15px; text-align: center; outline: none; margin-bottom: 15px; box-sizing: border-box; transition: all 0.3s;">
 
-            <!-- Tombol Cek -->
-            <button onclick="cekKelulusan()">CEK HASIL SELEKSI</button>
+        <!-- Tombol Aksi Utama Kelulusan -->
+        <button onclick="cekKelulusan()" style="width: 100%; padding: 14px; background: linear-gradient(90deg, #3b82f6, #06b6d4); border: none; border-radius: 8px; color: #ffffff; font-size: 15px; font-weight: 700; cursor: pointer; box-sizing: border-box; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4); text-transform: uppercase; letter-spacing: 0.5px; transition: transform 0.2s;">
+            CEK HASIL SELEKSI
+        </button>
 
-            <!-- Tempat Menampilkan Hasil (Kartu Hijau / Merah) -->
-            <div id="result-container"></div>
-            
-            <!-- Pesan Error Bawaan -->
-            <p id="errorMsg" class="error hidden">Data tidak ditemukan, periksa kembali nomor Anda.</p>
-            
-        </div>
+        <!-- Wadah Tampilan Kartu Pengumuman (Hijau / Merah) -->
+        <div id="result-container" style="margin-top: 25px; text-align: left;"></div>
+        
+        <!-- Pesan Kesalahan -->
+        <p id="errorMsg" class="error hidden" style="color: #f87171; font-size: 13px; margin-top: 15px; font-weight: 500;">Data tidak ditemukan, periksa kembali nomor Anda.</p>
+        
     </div>
 
-    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
