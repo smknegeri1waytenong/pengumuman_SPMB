@@ -192,7 +192,6 @@ const dataSiswaSpmb = {
     "0062640964": ["SELLA FRELISIYA", "Agribisnis Tanaman Pangan dan Hortikultura (ATPH)"],
     "0087385908": ["SHELLA NOVIA AMANDA", "Agribisnis Tanaman Pangan dan Hortikultura (ATPH)"]
 };
-
 function cekHasilSeleksiSpmb() {
     const inputVal = document.getElementById("nisnInput").value.trim();
     const errorMsg = document.getElementById("errorMsg");
