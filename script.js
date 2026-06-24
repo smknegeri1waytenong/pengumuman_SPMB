@@ -20,7 +20,7 @@ const dataSiswaSpmb = {
             "0101182921": ["DIDIN KHALDIYANSYAH", "Teknik Audio Video"],
             "0101426492": ["BIMA ADITIYA PRANATA", "Teknik Komputer dan Jaringan"],
             "0101475850": ["DWI FAHMI FARIZKI", "Teknik Instalasi dan Tenaga Listrik"],
-            "0101737719": ["JA\'FIR SHODIK", "Teknik Komputer dan Jaringan"],
+            "0101737719": ["JA'FIR SHODIK", "Teknik Komputer dan Jaringan"],
             "0101891085": ["KAFA HERDIANSYAH", "Teknik Instalasi dan Tenaga Listrik"],
             "0101948791": ["AHMAD SAMSUL BAHRI", "Teknik Audio Video"],
             "0102044981": ["ANI ROHIMAH", "Akuntansi dan Keuangan Lembaga"],
