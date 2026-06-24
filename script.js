@@ -234,7 +234,7 @@ const dataSiswaSpmb = {
             "0117777958": ["EKSA JUNI PRATAMA", "Teknik Audio Video"],
             "0117793665": ["TINA SEPTILIA", "Desain Komunikasi Visual"],
             "0117837558": ["HELISA", "Teknik Komputer dan Jaringan"],
-            "0118190838": ["AMELIA JANTIKA PUTRI", "Desain Permodelan Busana"],
+            "0118190838": ["AMELIA JANTIKA PUTRI", "Desain Komunikasi Visual"],
             "0118245338": ["RIZKY RAHMAT RAMDANI", "Desain Permodelan dan Informasi Bangunan"],
             "0118271622": ["ROHIM", "Desain Komunikasi Visual"],
             "0118305047": ["ADRIAN MARTA DINATA", "Teknik Instalasi dan Tenaga Listrik"],
